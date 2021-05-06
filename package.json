@@ -7,6 +7,14 @@
     "node": ">=12.16.1"
   },
   "main": "index.js",
+  "scripts": {
+    "lint": "eslint --ext .ts,.tsx src"
+  },
   "repository": "git@github.com:d-hussar/angler.git",
-  "author": "Dmitry Gusarov <dmitry.hussar@gmail.com>"
+  "author": "Dmitry Gusarov <dmitry.hussar@gmail.com>",
+  "devDependencies": {
+    "@d-hussar/eslint-plugin": "1.1.0-alpha.3",
+    "eslint": "7.25.0",
+    "typescript": "4.2.4"
+  }
 }
