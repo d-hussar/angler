@@ -10,11 +10,16 @@
   "scripts": {
     "lint": "eslint --ext .ts,.tsx src"
   },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
   "repository": "git@github.com:d-hussar/angler.git",
   "author": "Dmitry Gusarov <dmitry.hussar@gmail.com>",
   "devDependencies": {
     "@d-hussar/eslint-plugin": "1.1.0-alpha.3",
     "eslint": "7.25.0",
-    "typescript": "4.2.4"
+    "lint-staged": "10.5.4",
+    "typescript": "4.2.4",
+    "yorkie": "2.0.0"
   }
 }
