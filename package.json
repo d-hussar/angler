@@ -1,0 +1,12 @@
+{
+  "name": "angler",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.16.1"
+  },
+  "main": "index.js",
+  "repository": "git@github.com:d-hussar/angler.git",
+  "author": "Dmitry Gusarov <dmitry.hussar@gmail.com>"
+}
