@@ -8,6 +8,8 @@
   },
   "main": "index.js",
   "scripts": {
+    "start": "cross-env NODE_ENV=\"development\" TS_NODE_PROJECT=\"configs/tsconfig.webpack.json\" webpack server --open",
+    "build": "cross-env NODE_ENV=\"production\" TS_NODE_PROJECT=\"configs/tsconfig.webpack.json\" webpack --progress",
     "lint": "eslint --ext .ts,.tsx src"
   },
   "gitHooks": {
@@ -17,9 +19,24 @@
   "author": "Dmitry Gusarov <dmitry.hussar@gmail.com>",
   "devDependencies": {
     "@d-hussar/eslint-plugin": "1.1.0-alpha.3",
+    "@types/node": "15.0.2",
+    "@types/webpack": "5.28.0",
+    "@types/webpack-dev-server": "3.11.3",
+    "@types/webpack-merge": "5.0.0",
+    "clean-webpack-plugin": "4.0.0-alpha.0",
+    "cross-env": "7.0.3",
     "eslint": "7.25.0",
+    "html-webpack-plugin": "5.3.1",
     "lint-staged": "10.5.4",
+    "source-map-loader": "2.0.1",
+    "ts-loader": "9.1.2",
+    "ts-node": "9.1.1",
+    "tsconfig-paths": "3.9.0",
     "typescript": "4.2.4",
+    "webpack": "5.36.2",
+    "webpack-cli": "4.7.0",
+    "webpack-dev-server": "3.11.2",
+    "webpack-merge": "5.7.3",
     "yorkie": "2.0.0"
   }
 }
