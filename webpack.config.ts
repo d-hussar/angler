@@ -17,7 +17,7 @@ const devMode = NODE_ENV !== 'production';
 const config: Configuration = webpackMerge({
   mode: NODE_ENV,
   entry: {
-    app: path.resolve(__dirname, 'src/index.ts'),
+    app: path.resolve(__dirname, 'src/index.tsx'),
   },
   module: {
     rules: [
