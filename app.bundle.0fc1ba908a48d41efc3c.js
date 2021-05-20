@@ -1,1 +1,0 @@
-window.onload=function(){var e=document.createElement("div");e.innerText="Hello, Angler.js!";var n=document.getElementById("root");n&&n.appendChild(e)};
