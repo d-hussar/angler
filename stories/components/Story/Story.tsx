@@ -4,17 +4,38 @@ import React, {
   useState,
 } from 'react';
 import Content from '../Content';
-import { StoryProps } from './Story.types';
+import Menu from '../Menu';
+import { Container } from './Story.styled';
+import {
+  SetActive,
+  StoryProps,
+} from './Story.types';
 
 const Story: FC<StoryProps> = memo(({ stories }) => {
-  const [currentWidget] = stories;
-  const [currentUseCase] = currentWidget?.useCase || [];
+  const [currentWidgetIndex, setCurrentWidget] = useState(0);
+  const [currentUseCaseIndex, setCurrentUseCase] = useState(0);
+
+  const currentWidget = stories[currentWidgetIndex];
+  const currentUseCase = currentWidget?.useCase && currentWidget.useCase[currentUseCaseIndex];
+
+  const setActive: SetActive = widgetIndex => useCaseIndex => {
+    setCurrentWidget(widgetIndex);
+    setCurrentUseCase(useCaseIndex);
+  };
 
   return (
-    <Content
-      widget={ currentWidget }
-      useCase={ currentUseCase }
-    />
+    <Container>
+      <Menu
+        stories={ stories }
+        currentUseCaseIndex={ currentUseCaseIndex }
+        currentWidgetIndex={ currentWidgetIndex }
+        setActive={ setActive }
+      />
+      <Content
+        widget={ currentWidget }
+        useCase={ currentUseCase }
+      />
+    </Container>
   );
 });
 

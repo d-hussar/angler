@@ -20,7 +20,7 @@
   "repository": "git@github.com:d-hussar/angler.git",
   "author": "Dmitry Gusarov <dmitry.hussar@gmail.com>",
   "devDependencies": {
-    "@d-hussar/eslint-plugin": "1.1.0-alpha.3",
+    "@d-hussar/eslint-plugin": "1.1.0-alpha.4",
     "@types/node": "15.0.2",
     "@types/react": "17.0.5",
     "@types/react-dom": "17.0.3",

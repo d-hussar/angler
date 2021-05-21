@@ -20,3 +20,5 @@ export type Widget = {
 export type StoryProps = {
   stories: Array<Widget>;
 };
+
+export type SetActive = (widgetIndex: number) => (useCaseIndex: number) => void;

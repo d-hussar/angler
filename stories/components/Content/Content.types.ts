@@ -4,6 +4,6 @@ import {
 } from '../Story';
 
 export type ContentProps = {
-  widget: Widget;
-  useCase: UseCase;
+  widget?: Widget;
+  useCase?: UseCase;
 };
